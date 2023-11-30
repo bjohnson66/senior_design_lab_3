@@ -98,8 +98,8 @@ submitButton.addEventListener("click", function() {
       const user = userCredential.user;
       console.log("Success! Welcome back!");
       //window.alert("Success! Welcome back!");
-      
-      window.location.href = 'home.html';  // redir to home page
+      var element = document.getElementById("navigation");
+      element.style.display = "block";  // makes thing come back
     })
     .catch((error) => {
       const errorCode = error.code;
