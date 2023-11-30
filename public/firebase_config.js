@@ -114,14 +114,13 @@ submitButton.addEventListener("click", function() {
     });
 });
 logoutbtn.addEventListener("click", function() {
-  
     signOut(auth)
       .then((userCredential) => {
         // Signed out
         const user = userCredential.user;
         var element = document.getElementById("navigation");
         element.style.display = "none";  // makes things go away
-        window.location.href = 'index.html';
+        window.location.href = "index.html";
       })
       .catch((error) => {
         const errorCode = error.code;
