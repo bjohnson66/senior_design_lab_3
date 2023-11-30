@@ -114,22 +114,9 @@ submitButton.addEventListener("click", function() {
     });
 });
 logoutbtn.addEventListener("click", function() {
-    signOut(auth)
-      .then((userCredential) => {
-        // Signed out
-        const user = userCredential.user;
-        var element = document.getElementById("navigation");
-        element.style.display = "none";  // makes things go away
-        window.location.href = "index.html";
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log("Error occurred. Try again.");
-        window.alert("Error occurred. Try again.");
-        var element = document.getElementById("navigation");
-        element.style.display = "block";  // makes thing go away
-      });
+    var element = document.getElementById("navigation");
+    element.style.display = "none";  // makes things go away
+    window.location.href = "index.html";
   });
 
 signupButton.addEventListener("click", function() {
