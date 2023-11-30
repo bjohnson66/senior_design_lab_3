@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="AlexsPage" content="uniquePageIdentifierHere">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's Page</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header, nav {
+            background-color: #FFD700;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav {
+            background-color: #FFD700;
+            padding: 10px;
+            text-align: center;
+            display: inline-block;
+            margin: 0 auto;
+            font-weight: bold;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            margin: 0 auto;
+            font-weight: bold;
+        }
+
+        .panes {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 20px auto;
+        }
+        .comment-section {
+               margin-top: 20px;
+               padding: 20px;
+               border-top: 1px solid #ccc;
+               background-color: aliceblue;
+        }
+
+        .pane {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 10px;
+        }
+
+        .img {
+            max-width: 100%;
+            height: auto;
+        }
+        .article {
+			background-color: rgba(151, 151, 151, 0.792);
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px #999;
+			margin: 10px;
+			padding: 20px;
+			text-align: center;
+			max-width: 400px;
+			min-width: 250px;
+		}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alex's Page</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="alex.html">Alex</a>
+        <a href="bradley.html">Bradley</a>
+        <a href="rutger.html">Rutger</a>
+    </nav>
+
+    <div class="panes">
+        <div class="pane">
+            <article>
+                <h2>About Me</h2>
+                <img src="images/IMG_0216.jpg">
+                <p>stuff about me</p>
+        </div>
+    
+        <div class="pane">
+            <article>
+                <h2>Other Interests</h2>
+                <img src="images/fort.png">
+                <p>stuff about hobbies</p>
+        </div>
+    
+        <div class="pane">
+            <article>
+                <h2>My Projects</h2>
+                <img src="images/projects.jpg">
+                <p>stuff about projects</p>
+        </div>
+    </div>
+    
+    <div class="comment-section">
+        <center>
+            <div class="commentbox"></div>
+            <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+            <script>commentBox('5733764789436416-proj')</script>
+        </center>
+    </div>
+</body>
+</html>

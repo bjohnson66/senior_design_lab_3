@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="BradleysPage" content="uniquePageIdentifierHere">
+    <title>Bradley's Page</title>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js"></script>
+    <script src="./firebase-config.js"></script>
+    <script src ="login.js"></script>
+
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: url('images/asteroids.gif')  center top / cover no-repeat;
+                background-color: rgba(255, 255, 255, 0.7);
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            header, nav {
+            background-color: #FFD700;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            }
+
+            nav {
+            background-color: #FFD700;
+            padding: 10px;
+            text-align: center;
+            display: inline-block;
+            margin: 0 auto;
+            font-weight: bold;
+            }
+            nav a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+            }
+
+            nav a:hover {
+            margin: 0 auto;
+            font-weight: bold;
+            }
+            .subtitle {
+                background-color: gold;
+                color: black;
+                text-align: center;
+                padding: 10px;
+            }
+            .title {
+                color: black;
+                text-align: center;
+            }
+            .comment-section {
+               margin-top: 20px;
+               padding: 20px;
+               border-top: 1px solid #ccc;
+               background-color: aliceblue;
+           }
+           .panes {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 20px auto;
+           }
+           .pane {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+           }
+           
+            .img {
+              max-width: 100%;
+              height: auto;
+            }
+            .article {
+                background-color: rgba(214, 214, 214, 0.623);
+                border-radius: 5px;
+                box-shadow: 2px 2px 5px #0e0d0de8;
+                margin: 10px;
+                padding: 20px;
+                max-width: 400px;
+                min-width: 250px;
+            }
+
+        </style>
+</head>
+    <header>
+        <h1>Bradley's Page</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="alex.html">Alex</a>
+        <a href="bradley.html">Bradley</a>
+        <a href="rutger.html">Rutger</a>
+    </nav>
+    
+<body>
+    <h2 class="subtitle"> He's an ok guy</h2>
+
+    <script class="pjs-src" type="data"> 
+        var colo = 0;
+        var colo2 = 0;
+        var colo3 = 0;
+        var sizeUp = 5;
+        var strok = 0;
+        var mode = 1;
+        var Radius =  100;
+        fill(255,255,255);
+        rect(0, 0, 400,400);
+                
+        var draw = function() {
+            //black border
+            fill(0, 0, 0);
+            rect(0,0,400,30);
+            rect(0,0,30,400);
+            rect(0,370,400,30);
+            rect(370,0,30,400);
+            
+            strokeWeight(1);
+            fill(colo,colo2,colo3);
+            rect(350,0,30,30); 
+            fill(255, 255, 255);
+            textSize(12);
+            text("Current Color:", 270,2,100,50);
+            //sizeUp
+        fill(255, 255, 255);
+        rect(0, 30, 30,30);
+        fill(0, 0, 0);
+        textSize(50);
+        text("+",0,60);
+        //sizeDown
+        stroke(0, 0, 0);
+        fill(255, 255, 255);
+        rect(0, 60, 30,30);
+        fill(0, 0, 0);
+        textSize(50);
+        text("-",5,90);
+        
+            //red
+            fill(0,0,0);
+            rect(120,380,105,10);
+            fill(255, 255, 255);
+            textSize(15);
+            text("Red:",150,390);
+            text(colo,190,390);
+            //blue
+            fill(0,0,0);
+            rect(120,390,105,30);
+            fill(255, 255, 255);
+            textSize(15);
+            text("Blue:",150,400);  
+            text(colo3,190,400);
+             //GREEN
+            fill(0,0,0);
+            rect(0,380,120,10);
+            fill(255, 255, 255);
+            textSize(15);
+            text("Green:",30,390);
+            text(colo2,105,390);
+            //brush size
+            textSize(15);
+            fill(0,0,0);
+            rect(0,390,120,30);
+            fill(255, 255, 255);
+            textSize(15);
+            text("BrushSize:",30,400);
+            text(sizeUp,105,400);
+        //Eraser
+        rect(0,90,30,30);
+        fill(0, 0, 0);
+        textSize(10);
+        text("Erase",0,120);
+        stroke(0, 0, 0);
+        //red
+        fill(255, 0, 0);
+        rect(0, 0, 30,30);
+        //green
+        fill(0, 255, 43);
+        rect(30, 0, 30,30);
+        //blue
+        fill(0, 30, 255);
+        rect(60, 0, 30,30);
+        //yellow
+        fill(255, 242, 0);
+        rect(90,0,30,30);
+        //pink
+        fill(255, 0, 255);
+        rect(120,0,30,30);
+        //orange
+        fill(255, 149, 0);
+        rect(150,0,30,30);
+        //black
+        fill(0, 0, 0);
+        rect(180,0,30,30);
+        //grey
+        fill(222, 222, 222);
+        rect(210,0, 30,30);
+        //purple
+        fill(128, 0, 255);
+        rect(240,0, 30,30);
+        //sizeUp
+        fill(255, 255, 255);
+        rect(0, 30, 30,30);
+        fill(0, 0, 0);
+        textSize(50);
+        text("+",0,60);
+        //Outline
+        fill(128, 128, 128);
+        rect(370,370,30,30);
+        line(370,370,400,400);
+        //noOutline
+        rect(340,370, 30,30);
+        //square
+        fill(255, 255, 255);
+        rect(0,120,30,30);
+        fill(colo,colo2,colo3);
+        rect(5,125,20,20);
+        //draecircle
+        fill(255, 255, 255);
+        rect(0,150,30,30);
+        fill(colo,colo2,colo3);
+        ellipse(15,165,10,10);
+        
+        
+        //darker
+        fill(255, 255, 255);
+        rect(0,320,30,30);
+        fill(0, 0, 0);
+        textSize(10);
+        text("darker",0,340);
+        
+        //lighter
+        fill(255, 255, 255);
+        rect(0,350,30,30);
+        fill(0, 0, 0);
+        textSize(10);
+        text("lighter",0,370);
+        
+        //+red
+        fill(255, 255, 255);
+        rect(0,180,30,30);
+        fill(255, 0, 0);
+        textSize(50);
+        text("+",0,210);
+        //-red
+        fill(255, 255, 255);
+        rect(0,210,30,30);
+        fill(255, 0, 0);
+        textSize(50);
+        text("-",6,240);
+        //+green
+        fill(255, 255, 255);
+        rect(0,240,30,30);
+        fill(0, 255, 30);
+        textSize(50);
+        text("+",0,270);
+        //-green
+        fill(255, 255, 255);
+        rect(0,270,30,30);
+        fill(0, 255, 30);
+        textSize(50);
+        text("-",6,300);
+        //+blue
+        fill(255, 255, 255);
+        rect(370,310,30,30);
+        fill(0, 0, 255);
+        textSize(50);
+        text("+",370,340);
+        //-blue
+        fill(255, 255, 255);
+        rect(370,340,30,30);
+        fill(0, 0, 255);
+        textSize(50);
+        text("-",376,370);
+                   //blue+1
+               if(mouseIsPressed && mouseX>370 && mouseY > 310 && mouseY< 340) {
+                colo3= colo3 +1;
+                
+             }
+             //blue-1
+               if(mouseIsPressed && mouseX>370 && mouseY > 340 && mouseY< 370) {
+                colo3= colo3 -1;
+                
+             }
+                //green+1
+               if(mouseIsPressed && mouseX>0 && mouseX<30 && mouseY > 240 && mouseY< 270) {
+                colo2= colo2 +1;
+                
+             }
+             //green-1
+               if(mouseIsPressed && mouseX>0 && mouseX<30 && mouseY > 270 && mouseY< 300) {
+                colo2= colo2 -1;
+                
+             }
+             
+        
+            //colo+1
+            if(mouseIsPressed && mouseX>0 && mouseX<30 && mouseY > 350 && mouseY< 380) {
+                colo =colo + 1;
+                colo2 =colo2 + 1;
+                colo3 = colo3 + 1;
+             }
+            //colo-1
+            if(mouseIsPressed && mouseX>0 && mouseX<30 && mouseY > 320 && mouseY< 350) {
+                colo= colo - 1;
+                colo2= colo2 - 1;
+                colo3= colo3 - 1;
+             }
+           
+            //red+1
+               if(mouseIsPressed && mouseX>0 && mouseX<30 && mouseY > 180 && mouseY< 210) {
+                colo= colo +1;
+                
+             }
+             //red-1
+               if(mouseIsPressed && mouseX>0 && mouseX<30 && mouseY > 210 && mouseY< 240) {
+                colo= colo -1;
+                
+             }
+             
+             
+            //red
+          if (mouseIsPressed && mouseX < 30 && mouseY < 30) {
+              colo = 255;
+              colo2 = 0;
+              colo3 = 0;
+          }
+          //green
+           if (mouseIsPressed && mouseX > 30 && mouseX < 60 && mouseY < 30) {
+              colo = 0;
+              colo2 = 255;
+              colo3 = 43;
+          }
+          //blue
+            if (mouseIsPressed && mouseX > 60 && mouseX < 90 && mouseY     < 30) {
+              colo = 0;
+              colo2 = 30;
+              colo3 = 255;
+          }
+          //yellow
+           if (mouseIsPressed && mouseX > 90 && mouseX < 120 && mouseY     < 30) {
+              colo = 255;
+              colo2 = 242;
+              colo3 = 0;
+          }
+          //pink
+          if (mouseIsPressed && mouseX > 120 && mouseX < 150 && mouseY     < 30) {
+              colo = 255;
+              colo2 = 0;
+              colo3 = 255;
+          }
+          //orange
+          if (mouseIsPressed && mouseX > 150 && mouseX < 180 && mouseY     < 30) {
+              colo = 255;
+              colo2 = 149;
+              colo3 = 0;
+          }
+          //black
+          if (mouseIsPressed && mouseX > 180 && mouseX < 210 && mouseY     < 30) {
+              colo = 0;
+              colo2 = 0;
+              colo3 = 0;
+          }
+          //grey
+           if (mouseIsPressed && mouseX > 210 && mouseX < 240 && mouseY   < 30) {
+              colo = 222;
+              colo2 = 222;
+              colo3 = 222;
+          }
+          //purple
+           if (mouseIsPressed && mouseX > 240 && mouseX < 270 && mouseY < 30) {
+              colo = 128;
+              colo2 = 0;
+              colo3 = 255;
+          }
+          //sizeUp
+           if (mouseIsPressed && mouseX > 0 && mouseX < 30 && mouseY     > 30 && mouseY < 60) {
+              sizeUp += 1;
+          }
+          //sizeDown
+          if(mouseIsPressed && mouseX > 0 && mouseX < 30 && mouseY >60 && mouseY < 90) {
+              sizeUp -= 1;
+          }
+          
+          //noStroke
+          if(mouseIsPressed && mouseX > 340 && mouseX < 370 && mouseY > 370) {
+             strok = 0;
+          }
+          //Stroke
+        if(mouseIsPressed && mouseX > 370 && mouseX < 400 && mouseY > 370) {
+             strok = 1;
+          }
+          //Erase
+          if(mouseIsPressed && mouseX > 0 && mouseX < 30 && mouseY >90 && mouseY < 120) {
+              colo = 255;
+              colo2 = 255;
+              colo3 = 255;
+          }
+          //square
+          if(mouseIsPressed && mouseX>0 && mouseX<30 && mouseY > 120 && mouseY< 150) {
+              mode=2;
+          }
+          if(mouseIsPressed && mouseX>0 && mouseX<30 && mouseY > 150 && mouseY< 180) {
+              mode=1;
+          }
+          //on/offText
+        
+            if(strok === 0) {
+              textSize(12);
+              fill(255, 255, 255);
+              rect(250,370, 90,100);
+              fill(0, 0, 0);
+              text("Draw",310,390);
+          }
+            if(strok === 1) {
+              fill(255, 255, 255);
+              rect(250,370, 90,100);
+              fill(0, 0, 0);
+              textSize(12);
+              text("Silly",310,390);
+          }
+          text("BrushType:",250,390);
+          
+            
+             //square
+            if (mode === 2) {
+                Radius = 0;
+            }
+            
+        
+            //circle
+            if (mode === 1) {
+                Radius = 10000;
+            }
+          
+              if (mouseIsPressed && mouseX > 30 && mouseX < 370 && mouseY < 370 && mouseY > 30) {
+                if (stroke === 1) {
+                    
+                    stroke(0, 0, 0);
+                    
+                }
+                if(strok === 0) { 
+                    noStroke();
+                }
+                        
+                        fill(colo,colo2,colo3);
+                       rect(mouseX-sizeUp/2,mouseY-sizeUp/2,sizeUp,sizeUp,Radius);
+                        
+            }
+         
+            
+           
+            
+            
+        };
+        </script>
+        <!-- import a script which will automatically run the ProcessingJavaScript code -->
+        <script src="https://cdn.jsdelivr.net/gh/vExcess/libraries@main/runPJS.js"></script>
+    <div class="panes">
+        <div class="pane">
+            <article class="article">
+                <center>
+                    <h2>About Me</h2>
+                    <img src="images/croket_is_my_speciality.JPG" width="250" height="250">
+                </center>
+                 <p> "Crokett is my speciality - Mr. Lunt" In the picture above, I am the guy on the right rocking the Hawkeye muscle tank top.</p>
+            </article>
+        </div>
+        <div class="pane">
+            <article class="article">
+                <center><h2>Projects</h2></center>
+                <p> Embedded above is my first (mostly) functional application. Created in 7th grade using ProcessingJS, this simple drawing application was created to run in Khan Academy's built in environment. I was able to get it running offline in an HTML page back in the day, and was able to use a slightly different method to get it working on this site as well. Have fun drawing! (Note: it doesn't work so well once you scroll down)</p>
+                <img src="images/asteroids_short.gif" width="400" height="200">
+                <p> Other than that, I've made several projects while here at the University of Iowa; my favorite being Asteroids during CIE. (Screenshot below) I like it so much I made it the background too! </p>
+            </article>
+        </div>
+        <div class="pane">
+            <center><h2>Other Interest</h2></center>
+            <article class="article">
+                <p> Jesus, guitar, drums.</p>
+            </article>
+        </div>
+    </div>
+
+    <div class="comment-section">
+        <center>
+            <div class="commentbox"></div>
+            <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+            <script>commentBox('5733764789436416-proj')</script>
+        </center>
+    </div>
+
+</body>
+</html>

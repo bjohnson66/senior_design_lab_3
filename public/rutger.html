@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="PageID">Rutger's Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        .title{
+            color: black;
+            text-align: center;
+        }
+        .image1{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+        }
+        .column-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .column {
+            width: 30%;
+            text-align: center;
+        }
+        .comment-section {
+               margin-top: 20px;
+               padding: 20px;
+               border-top: 1px solid #ccc;
+               background-color: aliceblue;
+        }
+        .auth-section {
+            text-align: center;
+            margin: 20px;
+        }
+        header, nav {
+            background-color: #FFD700;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            }
+        nav {
+            background-color: #FFD700;
+            padding: 10px;
+            text-align: center;
+            display: inline-block;
+            margin: 0 auto;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            margin: 0 auto;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js"></script>
+    
+</head>
+<body>
+
+    <header class="title">
+        <h1>Rutger's Page</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="alex.html">Alex</a>
+        <a href="bradley.html">Bradley</a>
+        <a href="rutger.html">Rutger</a>
+    </nav>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Iowa_Hawkeyes_logo.svg/1200px-Iowa_Hawkeyes_logo.svg.png" alt="Top image" class="image1">
+    
+    <div class="column-container">
+        <div class="column">
+            <h3>About Me</h3>
+            <img src="image_2.jpg" alt="Image 2">
+            <p>About my College career here</p>
+        </div>
+        <div class="column">
+            <h3>Projects</h3>
+            <img src="image_3.jpg" alt="Image 3">
+            <p>Projects included here</p>
+        </div>
+        <div class="column">
+            <h3>Other Interest</h3>
+            <img src="path_to_image_4.jpg" alt="Image 4">
+            <p>Hobbies,interests,etc</p>
+        </div>
+    </div>
+
+    <center>
+        <div class="comment-section">
+                <div class="commentbox"></div>
+                <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+                <script>commentBox('5733764789436416-proj')</script>
+        </div>
+    </center>
+
+        <!-- Include your JavaScript file -->
+        <script src="./firebase-config.js"></script>
+</body>
+</html>
