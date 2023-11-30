@@ -74,12 +74,15 @@ createacctbtn.addEventListener("click", function() {
       .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      // ...
+      var element = document.getElementById("navigation");
+      element.style.display = "block";  // makes thing come back
       window.alert("Success! Account created.");
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      var element = document.getElementById("navigation");
+      element.style.display = "none";  // makes thing go away
       // ..
       window.alert("Error occurred. Try again.");
     });
@@ -106,6 +109,8 @@ submitButton.addEventListener("click", function() {
       const errorMessage = error.message;
       console.log("Error occurred. Try again.");
       window.alert("Error occurred. Try again.");
+      var element = document.getElementById("navigation");
+      element.style.display = "none";  // makes thing go away
     });
 });
 
