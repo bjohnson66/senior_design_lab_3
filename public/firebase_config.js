@@ -113,7 +113,7 @@ submitButton.addEventListener("click", function() {
       element.style.display = "none";  // makes thing go away
     });
 });
-signoutbtn.addEventListener("click", function() {
+logoutbtn.addEventListener("click", function() {
   
     signOut(auth)
       .then((userCredential) => {
