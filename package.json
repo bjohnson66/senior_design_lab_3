@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bjohnson66/senior_design_lab_3/issues"
   },
-  "homepage": "https://github.com/bjohnson66/senior_design_lab_3#readme"
+  "homepage": "https://github.com/bjohnson66/senior_design_lab_3#readme",
+  "dependencies": {
+    "firebase": "^10.7.0"
+  }
 }
