@@ -13,6 +13,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            background: url('images/uiowa-oldcapitol.png') center top / cover no-repeat;
         }
 
         header, nav {
@@ -26,6 +27,7 @@
             background-color: #FFD700;
             padding: 10px;
             text-align: center;
+            width: 75%;
             display: inline-block;
             margin: 0 auto;
             font-weight: bold;
@@ -68,21 +70,21 @@
             height: auto;
         }
         .article {
-			background-color: rgba(151, 151, 151, 0.792);
-			border-radius: 5px;
-			box-shadow: 2px 2px 5px #999;
-			margin: 10px;
-			padding: 20px;
-			text-align: center;
-			max-width: 400px;
-			min-width: 250px;
-		}
+                background-color: rgba(188, 187, 187, 0.796);
+                border-radius: 5px;
+                box-shadow: 2px 2px 5px #0e0d0de8;
+                margin: 10px;
+                padding: 20px;
+                max-width: 400px;
+                min-width: 250px;
+            }
     </style>
 </head>
 <body>
     <header>
         <h1>Alex's Page</h1>
     </header>
+    
     <nav>
         <a href="home.html">Home</a>
         <a href="projects.html">Projects</a>
@@ -93,24 +95,30 @@
 
     <div class="panes">
         <div class="pane">
-            <article>
+            <article class="article">
                 <h2>About Me</h2>
-                <img src="images/IMG_0216.jpg">
-                <p>stuff about me</p>
+                <img src="images/IMG_0216.jpg" width="90%" height="auto">
+                <p>I am from Center Point Iowa, a small suburb of Cedar Rapids. In highschool I played football, golf, track, and baseball.
+                    <br><br>
+                    I am studying electrical engineering with a focus in integrated circuits at the University of Iowa.
+                <p>
+            <article>
         </div>
     
         <div class="pane">
-            <article>
+            <article class="article">
                 <h2>Other Interests</h2>
-                <img src="images/fort.png">
-                <p>stuff about hobbies</p>
+                <img src="images/fort.png" width="90%" height="auto">
+                <p>Outside of school I love playing video games, skiing, traveling, and watching college football.</p>
+            <article>
         </div>
     
         <div class="pane">
-            <article>
+            <article class="article">
                 <h2>My Projects</h2>
-                <img src="images/projects.jpg">
+                <img src="images/projects.jpg" width="90%" height="auto">
                 <p>stuff about projects</p>
+            <article>
         </div>
     </div>
     
