@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword , signOut} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyChipnrfoIpnYrzxKA8cHU0hK3t-OOXMCY",
@@ -29,7 +29,7 @@ const confirmSignupEmailIn = document.getElementById("confirm-email-signup");
 const signupPasswordIn = document.getElementById("password-signup");
 const confirmSignUpPasswordIn = document.getElementById("confirm-password-signup");
 const createacctbtn = document.getElementById("create-acct-btn");
-
+const logoutbtn = document.getElementById("logoutbutton");
 const returnBtn = document.getElementById("return-btn");
 
 var email, password, signupEmail, signupPassword, confirmSignupEmail, confirmSignUpPassword;
@@ -113,6 +113,25 @@ submitButton.addEventListener("click", function() {
       element.style.display = "none";  // makes thing go away
     });
 });
+signoutbtn.addEventListener("click", function() {
+  
+    signOut(auth)
+      .then((userCredential) => {
+        // Signed out
+        const user = userCredential.user;
+        var element = document.getElementById("navigation");
+        element.style.display = "none";  // makes things go away
+        window.location.href = 'index.html';
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log("Error occurred. Try again.");
+        window.alert("Error occurred. Try again.");
+        var element = document.getElementById("navigation");
+        element.style.display = "block";  // makes thing go away
+      });
+  });
 
 signupButton.addEventListener("click", function() {
     main.style.display = "none";
