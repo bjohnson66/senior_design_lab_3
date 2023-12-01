@@ -130,10 +130,6 @@ logoutbtn.addEventListener("click", function() {
 
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log("Error occurred. Try again.");
-        window.alert("Error occurred. Try again.");
         var element = document.getElementById("navigation");
         element.style.display = "block";  // makes thing go back
         var element2 = document.getElementById("loginArea");
