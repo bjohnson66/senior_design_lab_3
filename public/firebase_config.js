@@ -120,7 +120,10 @@ logoutbtn.addEventListener("click", function() {
         const user = userCredential.user;
         var element = document.getElementById("navigation");
         element.style.display = "none";  // makes things go away
+        var element2 = document.getElementById("loginArea");
+        element2.style.display = "none";  // makes login go away
         window.location.href = "index.html";
+
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -128,7 +131,9 @@ logoutbtn.addEventListener("click", function() {
         console.log("Error occurred. Try again.");
         window.alert("Error occurred. Try again.");
         var element = document.getElementById("navigation");
-        element.style.display = "block";  // makes thing go away
+        element.style.display = "block";  // makes thing go back
+        var element2 = document.getElementById("loginArea");
+        element2.style.display = "block";  // makes login go back
       });
   });
 

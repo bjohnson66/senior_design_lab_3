@@ -18,6 +18,14 @@
             text-align: center;
         }
 
+        .subtitle {
+                background-color: gold;
+                color: black;
+                text-align: center;
+                padding: 10px;
+                display: inline-block;
+        }
+
         nav {
             background-color: #FFD700;
             padding: 10px;
@@ -39,45 +47,31 @@
         }
 
         .panes {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        margin: 20px auto;
-        }
-
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 20px auto;
+           }
         .pane {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin: 0 10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
         }
-
+           
         .img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .article {
-			  background-color: rgba(255, 255, 255, 0.701);
-			  border-radius: 5px;
-			  box-shadow: 2px 2px 5px #999;
-			  margin: 10px;
-		    padding: 20px;
-			  text-align: center;
-		  	max-width: 400px;
-		  	min-width: 250px;
-	  	  }
-          .login_area{
+              max-width: 100%;
+              height: auto;
+         }
+            .article {
                 background-color: rgba(214, 214, 214, 0.623);
                 border-radius: 5px;
                 box-shadow: 2px 2px 5px #0e0d0de8;
                 margin: 10px;
                 padding: 20px;
-                max-width: 400px;
-                min-width: 250px;
-          }
+                max-width: 90%;
+            }
     </style>
     <!-- OUR TEAM WEBSITE CONTENT FROM GITHUB PAGES GOES ABOVE HERE (AKA INDEX.HTML)-->
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
@@ -96,35 +90,9 @@
         <a href="rutger.html">Rutger</a>
         <nav id = "logoutbutton"><a href="index.html">Logout</a></nav>
     </nav>
-    
+ 
     <center>
-      <p>
-        <br>
-      </p>
-      <img src="Group Image">
-    </center>
-
-    <div class="panes">
-      <div class="pane">
-          <article>
-              <h2>Bradley</h2>
-              <p>stuff</p>
-      </div>
-  
-      <div class="pane">
-          <article>
-              <h2>Rutger</h2>
-              <p>stuff</p>
-      </div>
-  
-      <div class="pane">
-          <article>
-              <h2>Alex</h2>
-              <p>stuff</p>
-      </div>
-  </div>
-    <center>
-        <div class = "login_area">
+        <div class = "login_area" id="loginArea" style="display:block">
             <div id= "main">
                 <h1>Sign In</h1>
                 <input id = "email" type = "text" placeholder = "Email"></input>
@@ -144,6 +112,99 @@
             </div>
         </div>
     </center>
+
+    <h2 class="subtitle">Team: 0xC</h2>
+
+    <div class="panes">
+      <div class="pane">
+          <article>
+              <h2>Bradley</h2>
+              <p>Major: Computer Science and Engineering
+                <br><br>
+                Focus: Software Engineering
+                <br><br>
+                Skills: C++, Java, Python, Matlab
+                <br><br>
+                Interests: Video games, football, guitar, drums.
+              </p>
+              <img src="images/brad_uiowa.JPG" width="75%" height="auto">
+      </div>
+  
+      <div class="pane">
+          <article>
+              <h2>Rutger</h2>
+              <p>Major: Computer Science and Engineering
+                <br><br>
+                Focus: 
+                <br><br>
+                Skills: 
+                <br><br>
+                Interests: 
+              </p>
+      </div>
+  
+      <div class="pane">
+          <article>
+                <h2>Alex</h2>
+                <p>Major: Electrical Engineering
+                <br><br>
+                Focus: Integrated Circuits
+                <br><br>
+                Skills: Circuit Design, Matlab, LTspice
+                <br><br>
+                Interests: Football, Skiiing, Baseball, Video Games
+                <p>
+                <img src="images/IMG_0216.jpg" width="75%" height="auto">
+       </div>
+    </div>
+
+    <div class="panes">
+        <div class="pane">
+            <article>
+                <center>
+                    <h2>Lab 1 - Temperature Sensor</h2>
+                    <img src="images/lab_1.png" width="75%" height="auto">
+                </center> 
+                <p>In Lab 1, Bradley's group created a temperature sensor box that could communicate via Bluetooth with a GUI applicaiton and send an SMS alert whent the temperature was outside of the threshold. The temperature senor was detachable from the box via an audio jack, the box also had an LCD display that displayed the current temp and any error messages. The diaply could be turned on with a button on the box or via the GUI. </p>
+        </div>
+    
+        <div class="pane">
+            <article>
+                <center>
+                    <h2>Lab 2 - Infrared Reciever</h2>
+                    <img src="images/IMG_0124.jpg" width="75%" height="auto">
+                </center>
+                <br>
+                <p>Engineers often grapple with the challenge of noisy sensors. Lab 2 addressed nosiy sensor issues, this lab was dedicated to designing and constructing an "electric eye" light beam-interrupter safety system. This system, featuring a transmitter projecting a light beam onto a receiver, activates a warning LED when the beam is obstructed by an object, a concept commonly seen in garage door safety and light curtain systems.</p>
+                <center>
+                    <img src="images/L2Circuit.png" width="75%" height="auto">
+                </center>
+                <br>
+                <p>The circuit that Alex's group ended up designing was partially based off of the circuit design from the IR Term Project from ECE:3410 Electronic Cicuits. His group had to calculate resistor and capacitor values to accomodate the change in transmission frequency, and add in a high pass filter that would help eliminate the frequency put off from a 100W fluorescent light. To increase the range of the transmitter, the voltage amplifier was increased and the group was easily able to acquire the desired reciever range.</p>
+        </div>
+    </div>
+    
+    <div class="panes">
+        <div class="pane">
+            <article>
+                <center>
+                <h2>Lab 3 - Website</h2>
+                <center>
+                <p>You are looking at Lab 3 right now! Lab 3 is an HTML website hosted on GitHub Pages with Firebase SDK providing the backend web server functionality.</p>
+        </div>
+    
+        <div class="pane">
+            <article>
+                <center>
+                <h2>Capstone Project - 
+                    <br>
+                    BAE NSS Multi-Source GNSS Constellation Tracker and Operator Console Application</h2>
+                <img src="images/BAE_Systems_logo.svg.png" width="90%" height="auto">
+                </article>center>
+                <p></p>
+        </div>
+    </div>
+
 
 
   <script type = "module" src = "firebase_config.js"></script>
