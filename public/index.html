@@ -92,138 +92,118 @@
     <header>
         <h1>Home</h1>
     </header>
-    <nav  id="navigation" style="display:none">
+    <nav >
+        <a href="home.html">Home</a>
         <a href="alex.html">Alex</a>
         <a href="bradley.html">Bradley</a>
         <a href="rutger.html">Rutger</a>
         <nav id = "logoutbutton"><a href="index.html">Logout</a></nav>
     </nav>
- 
-    <center>
-        <div class = "login_area" id="loginArea">
-            <div id= "main">
-                <h1>Sign In</h1>
-                <input id = "email" type = "text" placeholder = "Email"></input>
-                <input id = "password" type = "password" placeholder = "Password"></input>
-                <button id = "submit">Submit</button>
-                <p><span></span></p>
-                <button id = "sign-up">Sign Up</button>
-            </div>
-            <div id = "create-acct" style="display:none">
-                <h1>Create an Account</h1>
-                <input id = "email-signup" type = "text" placeholder = "Email *"></input>
-                <input id = "confirm-email-signup" type = "email" placeholder = "Confirm Email *"></input>
-                <input id = "password-signup" type = "password" placeholder = "Password *"></input>
-                <input id = "confirm-password-signup" type = "password" placeholder = "Confirm Password *"></input>
-                <button id = "create-acct-btn">Create Account</button>
-                <button id = "return-btn">Return to Login</button>
-            </div>
-        </div>
-    </center>
 
+    <br>
     <h2 class="subtitle">Team: 0xC</h2>
 
+
+
     <div class="panes">
+      <div class="pane">
+          <article class="article">
+              <h2>Bradley</h2>
+              <p>Major: Computer Science and Engineering
+                <br><br>
+                Focus: Software Engineering
+                <br><br>
+                Skills: C++, Java, Python, Matlab
+                <br><br>
+                Interests: Video games, football, guitar, drums.
+              </p>
+              <img src="images/brad_uiowa.JPG" width="75%" height="auto">
+          </article>
+      </div>
+  
+      <div class="pane">
+          <article class="article">
+              <h2>Rutger</h2>
+              <p>Major: Computer Science and Engineering
+                <br><br>
+                Focus: Software Engineering
+                <br><br>
+                Skills: Java, JavaScript, python, C++, SQL, Firebase
+                <br><br>
+                Interests: Iowa Football, Video games, Anime, Reading
+              </p>
+              <img src="imagetoadd" width="75%" height="auto">
+            </article>    
+      </div>
+  
+      <div class="pane">
+          <article class="article">
+                <h2>Alex</h2>
+                <p>Major: Electrical Engineering
+                <br><br>
+                Focus: Integrated Circuits
+                <br><br>
+                Skills: Circuit Design, Matlab, LTspice
+                <br><br>
+                Interests: Football, Skiiing, Baseball, Video Games
+                </p>
+                <img src="images/IMG_0216.jpg" width="75%" height="auto">
+          </article>       
+      </div>
+  </div>
+
+  <div class="panes">
+    <div class="pane">
+        <article class="article">
+            <center>
+                <h2>Lab 1 - Temperature Sensor</h2>
+                <img src="images/lab_1.png" width="75%" height="auto">
+            </center> 
+            <p>In Lab 1, Bradley's group created a temperature sensor box that could communicate via Bluetooth with a GUI applicaiton and send an SMS alert whent the temperature was outside of the threshold. The temperature senor was detachable from the box via an audio jack, the box also had an LCD display that displayed the current temp and any error messages. The diaply could be turned on with a button on the box or via the GUI. </p>
+        </article>
         <div class="pane">
             <article class="article">
-                <h2>Bradley</h2>
-                <p>Major: Computer Science and Engineering
-                  <br><br>
-                  Focus: Software Engineering
-                  <br><br>
-                  Skills: C++, Java, Python, Matlab
-                  <br><br>
-                  Interests: Video games, football, guitar, drums.
-                </p>
-                <img src="images/brad_uiowa.JPG" width="75%" height="auto">
+                <center>
+                <h2>Lab 3 - Website</h2>
+                </center>
+                <p>You are looking at Lab 3 right now! Lab 3 is an HTML website hosted on GitHub Pages with Firebase SDK providing the backend web server functionality.</p>
+        </article>
+    </div>
+
+    <div class="pane">
+        <article class="article">
+            <center>
+                <h2>Lab 2 - Infrared Reciever</h2>
+                <img src="images/IMG_0124.jpg" width="75%" height="auto">
+            </center>
+            <br>
+            <p>Engineers often grapple with the challenge of noisy sensors. Lab 2 addressed nosiy sensor issues, this lab was dedicated to designing and constructing an "electric eye" light beam-interrupter safety system. This system, featuring a transmitter projecting a light beam onto a receiver, activates a warning LED when the beam is obstructed by an object, a concept commonly seen in garage door safety and light curtain systems.</p>
+            <center>
+                <img src="images/L2Circuit.png" width="75%" height="auto">
+            </center>
+            <br>
+            <p>The circuit that Alex's group ended up designing was partially based off of the circuit design from the IR Term Project from ECE:3410 Electronic Cicuits. His group had to calculate resistor and capacitor values to accomodate the change in transmission frequency, and add in a high pass filter that would help eliminate the frequency put off from a 100W fluorescent light. To increase the range of the transmitter, the voltage amplifier was increased and the group was easily able to acquire the desired reciever range.</p>
+        </article>  
+    </div>
+</div>
+
+<div class="panes">
+    <center>
+        <div class="pane">
+            <article class="article">
+                <center>
+                    <h2>Capstone Project - 
+                        <br>
+                        BAE NSS Multi-Source GNSS Constellation Tracker and Operator Console Application</h2>
+                    <img src="images/BAE_Systems_logo.svg.png" width="90%" height="auto">
+                    </article>
+                </center>
+                <p></p>
             </article>
         </div>
-    
-        <div class="pane">
-            <article class="article">
-                <h2>Rutger</h2>
-                <p>Major: Computer Science and Engineering
-                  <br><br>
-                  Focus: 
-                  <br><br>
-                  Skills: 
-                  <br><br>
-                  Interests: 
-                </p>
-                <!--IMAGE HERE-->
-              </article>    
-        </div>
-    
-        <div class="pane">
-            <article class="article">
-                  <h2>Alex</h2>
-                  <p>Major: Electrical Engineering
-                  <br><br>
-                  Focus: Integrated Circuits
-                  <br><br>
-                  Skills: Circuit Design, Matlab, LTspice
-                  <br><br>
-                  Interests: Football, Skiiing, Baseball, Video Games
-                  </p>
-                  <img src="images/IMG_0216.jpg" width="75%" height="auto">
-            </article>       
-        </div>
-    </div>
-  
-    <div class="panes">
-      <div class="pane">
-          <article class="article">
-              <center>
-                  <h2>Lab 1 - Temperature Sensor</h2>
-                  <img src="images/lab_1.png" width="75%" height="auto">
-              </center> 
-              <p>In Lab 1, Bradley's group created a temperature sensor box that could communicate via Bluetooth with a GUI applicaiton and send an SMS alert whent the temperature was outside of the threshold. The temperature senor was detachable from the box via an audio jack, the box also had an LCD display that displayed the current temp and any error messages. The diaply could be turned on with a button on the box or via the GUI. </p>
-          </article>
-      </div>
-  
-      <div class="pane">
-          <article class="article">
-              <center>
-                  <h2>Lab 2 - Infrared Reciever</h2>
-                  <img src="images/IMG_0124.jpg" width="75%" height="auto">
-              </center>
-              <br>
-              <p>Engineers often grapple with the challenge of noisy sensors. Lab 2 addressed nosiy sensor issues, this lab was dedicated to designing and constructing an "electric eye" light beam-interrupter safety system. This system, featuring a transmitter projecting a light beam onto a receiver, activates a warning LED when the beam is obstructed by an object, a concept commonly seen in garage door safety and light curtain systems.</p>
-              <center>
-                  <img src="images/L2Circuit.png" width="75%" height="auto">
-              </center>
-              <br>
-              <p>The circuit that Alex's group ended up designing was partially based off of the circuit design from the IR Term Project from ECE:3410 Electronic Cicuits. His group had to calculate resistor and capacitor values to accomodate the change in transmission frequency, and add in a high pass filter that would help eliminate the frequency put off from a 100W fluorescent light. To increase the range of the transmitter, the voltage amplifier was increased and the group was easily able to acquire the desired reciever range.</p>
-          </article>  
-      </div>
-  </div>
-  
-  <div class="panes">
-      <div class="pane">
-          <article class="article">
-              <center>
-              <h2>Lab 3 - Website</h2>
-              </center>
-              <p>You are looking at Lab 3 right now! Lab 3 is an HTML website hosted on GitHub Pages with Firebase SDK providing the backend web server functionality.</p>
-          </article>
-      </div>
-  
-      <div class="pane">
-          <article class="article">
-              <center>
-              <h2>Capstone Project - 
-                  <br>
-                  BAE NSS Multi-Source GNSS Constellation Tracker and Operator Console Application</h2>
-              <img src="images/BAE_Systems_logo.svg.png" width="90%" height="auto">
-              </article>center>
-              <p></p>
-          </article>
-      </div>
-  </div>
-
-
-
-  <script type = "module" src = "firebase_config.js"></script>
+    </center>
+</div>
     
  </body>
+ 
  </html>
