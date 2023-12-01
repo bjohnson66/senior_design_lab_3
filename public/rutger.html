@@ -17,15 +17,6 @@
             margin-right: auto;
             width: 20%;
         }
-        .column-container {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-        }
-        .column {
-            width: 30%;
-            text-align: center;
-        }
         .comment-section {
                margin-top: 20px;
                padding: 20px;
@@ -61,6 +52,27 @@
             margin: 0 auto;
             font-weight: bold;
         }
+        .panes {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 20px auto;
+           }
+        .pane {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+           }
+        .article {
+            background-color: rgba(214, 214, 214, 0.623);
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px #0e0d0de8;
+            margin: 10px;
+            padding: 20px;
+            max-width: 90%;
+        }
     </style>
 
     <!-- Firebase SDK -->
@@ -84,21 +96,36 @@
 
     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Iowa_Hawkeyes_logo.svg/1200px-Iowa_Hawkeyes_logo.svg.png" alt="Top image" class="image1">
     
-    <div class="column-container">
-        <div class="column">
-            <h3>About Me</h3>
-            <img src="image_2.jpg" alt="Image 2">
-            <p>About my College career here</p>
+    <div class="panes">
+        <div class="pane">
+            <article class="article">
+                <center>
+                    <h2>About Me</h2>
+                    <img src="profile picture.jpeg" width="100%" height="auto">
+                </center>
+                 <p> I am originally from Sherman IL which is a small town near Springfield IL. I am studying Computer Science and Engineering at the University of Iowa.</p>
+            </article>
+            <article class="article">
+                <center><h2>Other Interest</h2></center>
+                <p>I spend alot of my free time reading everything from fiction to computer Science related material</p>
+                <center>
+                    <img src="images\bauldursgate3.jpg" width="100%" height="auto">
+                </center>
+                <p>Most of the video games that I actually play are Fortnite, Bauldur Gate 3, Skyrim, and various VR games</p>
+                <center>
+                    <img src="images/13528.jpeg" width="90%" height="auto">
+                </center>
+                <p> Above is a picutre of me after winning state in football back in highschool, </p>
+            </article>
         </div>
-        <div class="column">
-            <h3>Projects</h3>
-            <img src="image_3.jpg" alt="Image 3">
-            <p>Projects included here</p>
-        </div>
-        <div class="column">
-            <h3>Other Interest</h3>
-            <img src="path_to_image_4.jpg" alt="Image 4">
-            <p>Hobbies,interests,etc</p>
+        <div class="pane">
+            <article class="article">
+                </center>
+                <p> In Communication Networks,My group created a simple file transfer between a server and client that had a simple protocol with error handling</p>
+                <center>
+                    <img src="images" width="100%" height="auto">
+                </center>
+               </article>
         </div>
     </div>
 
