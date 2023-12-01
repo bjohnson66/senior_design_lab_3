@@ -103,6 +103,8 @@ submitButton.addEventListener("click", function() {
       //window.alert("Success! Welcome back!");
       var element = document.getElementById("navigation");
       element.style.display = "block";  // makes thing come back
+      var element2 = document.getElementById("loginArea");
+      element2.style.display = "none";  // makes login go away
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -111,6 +113,8 @@ submitButton.addEventListener("click", function() {
       window.alert("Error occurred. Try again.");
       var element = document.getElementById("navigation");
       element.style.display = "none";  // makes thing go away
+      var element2 = document.getElementById("loginArea");
+      element2.style.display = "block";  // makes login go back
     });
 });
 logoutbtn.addEventListener("click", function() {
