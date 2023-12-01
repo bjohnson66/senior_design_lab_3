@@ -4,74 +4,82 @@
     <title>Team 0xC</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background: url('images/uiowa-oldcapitol.png') center top / cover no-repeat;
-            background-color: rgba(255, 255, 255, 0.7);
-        }
-
-        header {
+                font-family: Arial, sans-serif;
+                background: url('images/uiowa-oldcapitol.png') center top / cover no-repeat;
+                background-color: rgba(255, 255, 255, 0.7);
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            header, nav {
             background-color: #FFD700;
             padding: 10px;
             text-align: center;
-        }
+            width: 100%;
+            }
 
-        .subtitle {
-                background-color: gold;
-                color: black;
-                text-align: center;
-                padding: 10px;
-                display: inline-block;
-        }
-
-        nav {
+            nav {
             background-color: #FFD700;
             padding: 10px;
             text-align: center;
             display: inline-block;
             margin: 0 auto;
             font-weight: bold;
-        }
-
-        nav a {
+            }
+            nav a {
             text-decoration: none;
             color: black;
             margin: 0 10px;
-        }
+            }
 
-        nav a:hover {
+            nav a:hover {
             margin: 0 auto;
             font-weight: bold;
-        }
-
-        .panes {
+            }
+            .subtitle {
+                background-color: gold;
+                color: black;
+                text-align: center;
+                padding: 10px;
+            }
+            .title {
+                color: black;
+                text-align: center;
+            }
+            .comment-section {
+               margin-top: 20px;
+               padding: 20px;
+               border-top: 1px solid #ccc;
+               background-color: aliceblue;
+           }
+           .panes {
             display: flex;
             justify-content: space-between;
             width: 90%;
             margin: 20px auto;
            }
-        .pane {
+           .pane {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 0 10px;
-        }
+           }
            
-        .img {
+            .img {
               max-width: 100%;
               height: auto;
-         }
-         .article {
-            background-color: rgba(214, 214, 214, 0.623);
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px #0e0d0de8;
-            margin: 10px;
-            padding: 20px;
-            max-width: 90%;
-        }
+            }
+            .article {
+                background-color: rgba(214, 214, 214, 0.623);
+                border-radius: 5px;
+                box-shadow: 2px 2px 5px #0e0d0de8;
+                margin: 10px;
+                padding: 20px;
+                max-width: 90%;
+            }
     </style>
     <!-- OUR TEAM WEBSITE CONTENT FROM GITHUB PAGES GOES ABOVE HERE (AKA INDEX.HTML)-->
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
