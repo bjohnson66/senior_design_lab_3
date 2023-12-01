@@ -2,4 +2,4 @@
 senior_design_lab_3
 
 # Link to website:
-https://lab30xc.firebaseapp.com/
+https://lab30xc.web.app/
