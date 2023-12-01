@@ -92,37 +92,39 @@
     <header>
         <h1>Home</h1>
     </header>
-    <nav  id="navigation" style="display:none">
+    <nav id="navigation" style="display:none">
+        <a href="home.html">Home</a>
         <a href="alex.html">Alex</a>
         <a href="bradley.html">Bradley</a>
         <a href="rutger.html">Rutger</a>
         <nav id = "logoutbutton"><a href="index.html">Logout</a></nav>
     </nav>
- 
+
+    <br>
+    <h2 class="subtitle">Team: 0xC</h2>
+
     <center>
-        <div class = "login_area" id="loginArea">
-            <div id= "main">
+        <div class="login_area" id="loginArea">
+            <div id="main">
                 <h1>Sign In</h1>
-                <input id = "email" type = "text" placeholder = "Email"></input>
-                <input id = "password" type = "password" placeholder = "Password"></input>
-                <button id = "submit">Submit</button>
+                <input id="email" type="text" placeholder="Email">
+                <input id="password" type="password" placeholder="Password">
+                <button id="submit">Submit</button>
                 <p><span></span></p>
-                <button id = "sign-up">Sign Up</button>
+                <button id="sign-up">Sign Up</button>
             </div>
-            <div id = "create-acct" style="display:none">
+            <div id="create-acct" style="display:none">
                 <h1>Create an Account</h1>
-                <input id = "email-signup" type = "text" placeholder = "Email *"></input>
-                <input id = "confirm-email-signup" type = "email" placeholder = "Confirm Email *"></input>
-                <input id = "password-signup" type = "password" placeholder = "Password *"></input>
-                <input id = "confirm-password-signup" type = "password" placeholder = "Confirm Password *"></input>
-                <button id = "create-acct-btn">Create Account</button>
-                <button id = "return-btn">Return to Login</button>
+                <input id="email-signup" type="text" placeholder="Email *">
+                <input id="confirm-email-signup" type="email" placeholder="Confirm Email *">
+                <input id="password-signup" type="password" placeholder="Password *">
+                <input id="confirm-password-signup" type="password" placeholder="Confirm Password *">
+                <button id="create-acct-btn">Create Account</button>
+                <button id="return-btn">Return to Login</button>
             </div>
         </div>
     </center>
-
-    <h2 class="subtitle">Team: 0xC</h2>
-
+    <h2 class="subtitle">Projects:</h2>
     <div class="panes">
         <div class="pane">
             <article class="article">
@@ -144,13 +146,13 @@
                 <h2>Rutger</h2>
                 <p>Major: Computer Science and Engineering
                   <br><br>
-                  Focus: 
+                  Focus: Software Engineering
                   <br><br>
-                  Skills: 
+                  Skills: Java, JavaScript, python, C++, SQL, Firebase
                   <br><br>
-                  Interests: 
+                  Interests: Iowa Football, Video games, Anime, Reading
                 </p>
-                <!--IMAGE HERE-->
+                <img src="imagetoadd" width="75%" height="auto">
               </article>    
         </div>
     
@@ -179,8 +181,13 @@
               </center> 
               <p>In Lab 1, Bradley's group created a temperature sensor box that could communicate via Bluetooth with a GUI applicaiton and send an SMS alert whent the temperature was outside of the threshold. The temperature senor was detachable from the box via an audio jack, the box also had an LCD display that displayed the current temp and any error messages. The diaply could be turned on with a button on the box or via the GUI. </p>
           </article>
+          <article class="article">
+              <center>
+              <h2>Lab 3 - Website</h2>
+              </center>
+              <p>You are looking at Lab 3 right now! Lab 3 is an HTML website hosted on GitHub Pages with Firebase SDK providing the backend web server functionality.</p>
+           </article>
       </div>
-  
       <div class="pane">
           <article class="article">
               <center>
@@ -198,32 +205,21 @@
       </div>
   </div>
   
-  <div class="panes">
+  <center>
       <div class="pane">
           <article class="article">
               <center>
-              <h2>Lab 3 - Website</h2>
+                  <h2>Capstone Project - 
+                      <br>
+                      BAE NSS Multi-Source GNSS Constellation Tracker and Operator Console Application</h2>
+                  <img src="images/BAE_Systems_logo.svg.png" width="90%" height="auto">
+                  </article>
               </center>
-              <p>You are looking at Lab 3 right now! Lab 3 is an HTML website hosted on GitHub Pages with Firebase SDK providing the backend web server functionality.</p>
-          </article>
-      </div>
-  
-      <div class="pane">
-          <article class="article">
-              <center>
-              <h2>Capstone Project - 
-                  <br>
-                  BAE NSS Multi-Source GNSS Constellation Tracker and Operator Console Application</h2>
-              <img src="images/BAE_Systems_logo.svg.png" width="90%" height="auto">
-              </article>center>
               <p></p>
           </article>
       </div>
-  </div>
-
-
-
-  <script type = "module" src = "firebase_config.js"></script>
+  </center>
     
  </body>
+ 
  </html>
